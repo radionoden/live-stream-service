@@ -1,8 +1,8 @@
 # Live Stream Service
 
-## silence-44100-192k-stereo.mp3
+## icecast/silence-44100-192k-stereo.mp3
 
-The `silence-44100-192k-stereo.mp3` file was created this way:
+The `icecast/silence-44100-192k-stereo.mp3` file was created this way:
  
 ```
 #!/bin/bash
