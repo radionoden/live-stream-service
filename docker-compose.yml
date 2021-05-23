@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  icecast:
+    build: icecast/
+    env_file:
+      - ./.env
+    networks:
+      default:
+    ports:
+      - "8000:8000"
+  liquidsoap:
+    build: liquidsoap/
+    depends_on:
+      - icecast
+    env_file:
+      - ./.env
+    networks:
+      default:
+    ports:
+      - "8080:8080"
