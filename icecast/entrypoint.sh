@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -n "$ICECASTPASSWORD" ]; then
-  sed -i "s/hackme/$ICECASTPASSWORD/g" /etc/icecast.xml
+  sed -i "s/hackme/$ICECASTPASSWORD/g" /app/icecast.xml
 fi
 
 exec "$@"

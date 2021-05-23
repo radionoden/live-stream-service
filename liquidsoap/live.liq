@@ -18,6 +18,6 @@ radio = mksafe(fallback(track_sensitive = false, [livestreams ]))
 output.icecast(%mp3(stereo=true,samplerate=44100,internal_quality=1,bitrate=192),
   format="audio/mpeg",
   host="icecast", port=8000, user="source", password="ICECASTPASSWORD",
-  description="Radia Noden", mount="stream.mp3",
+  description="Radia Noden", mount="live",
   name="(((( Radio Noden ))))", icy_metadata="true", radio)
 

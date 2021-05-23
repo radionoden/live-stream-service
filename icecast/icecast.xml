@@ -30,21 +30,23 @@
 
     <http-headers>
         <header name="Access-Control-Allow-Origin" value="*" />
+        <header name="Access-Control-Allow-Headers" value="Origin, Accept, X-Requested-With, Content-Type, If-Modified-Since" />
+        <header name="Access-Control-Allow-Methods" value="GET, OPTIONS, HEAD" />
+        <header name="X-Robots-Tag" value="index, noarchive" />
     </http-headers>
 
     <fileserve>1</fileserve>
 
-    <mount>
-        <mount-name>/stream.mp3</mount-name>
+    <mount type="default">
         <fallback-mount>/silence.mp3</fallback-mount>
         <fallback-override>1</fallback-override>
+	<public>0</public>
     </mount>
 
     <paths>
-        <basedir>/usr/share/icecast</basedir>
-        <logdir>/var/log/icecast</logdir>
-        <webroot>/usr/share/icecast/web</webroot>
-        <adminroot>/usr/share/icecast/admin</adminroot>
+        <basedir>/usr/share/icecast2</basedir>
+        <webroot>/usr/share/icecast2/web</webroot>
+        <adminroot>/usr/share/icecast2/admin</adminroot>
     </paths>
 
     <logging>
@@ -55,9 +57,5 @@
 
     <security>
         <chroot>0</chroot>
-        <changeowner>
-            <user>icecast</user>
-            <group>icecast</group>
-        </changeowner>
     </security>
 </icecast>
